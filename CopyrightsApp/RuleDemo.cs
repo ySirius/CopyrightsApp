@@ -28,7 +28,7 @@ namespace CopyrightsApp
 
             Rule vue = new Rule()
             {
-                FileExtension = "File \".html.css.vue.scss.ts.tsx\"",
+                FileExtension = "File \".html.css.vue.scss.ts.tsx.js\"",
                 LineComment = "LineComment  \"//\"",
                 BlockCommentStart = "BlockCommentStart \"/*\"",
                 BlockCommentEnd = "BlockCommentEnd \"*/\"",

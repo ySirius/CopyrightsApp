@@ -13,6 +13,7 @@ namespace CopyrightsApp
 
         public static void TraverseSourceForParse(string sourceDirectory)
         {
+            ParsedLines = new StringBuilder();
             Parallel.ForEach(Directory.GetFiles(sourceDirectory, "*.*", SearchOption.AllDirectories), filePath => ParseFile(filePath, FindRule(filePath)));
         }
 
@@ -38,6 +39,8 @@ namespace CopyrightsApp
                 ParsedLines.Append(fileContent.RemoveEmptyLines());
                 ProgressInfo.ShowProgress(filePath, ProgressInfo.Stage.FileParsed);
             }
+
+            reader.Close();
         }
 
         private static string RemoveEmptyLines(this string content)
