@@ -54,6 +54,25 @@ namespace CopyrightsApp
             Rules.Add(weapp);
 
 
+            Rule c = new Rule()
+            {
+                FileExtension = "File \".c.h\"",
+                LineComment = "LineComment  \"//\"",
+                BlockCommentStart = "BlockCommentStart \"/*\"",
+                BlockCommentEnd = "BlockCommentEnd \"*/\"",
+            };
+            Rules.Add(c);
+
+            Rule cplus = new Rule()
+            {
+                FileExtension = "File \".cpp.h\"",
+                LineComment = "LineComment  \"//\"",
+                BlockCommentStart = "BlockCommentStart \"/*\"",
+                BlockCommentEnd = "BlockCommentEnd \"*/\"",
+            };
+            Rules.Add(cplus);
+
+
             foreach (var rule in Rules)
             {
                 rule.FileExtension = ExtractValue(rule.FileExtension);

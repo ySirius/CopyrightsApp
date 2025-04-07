@@ -129,7 +129,9 @@
             "Go",
             "Vue",
             "Python",
-            "WeApp"});
+            "WeApp",
+            "C",
+            "C++"});
             this.cbRule.Location = new System.Drawing.Point(80, 49);
             this.cbRule.Name = "cbRule";
             this.cbRule.Size = new System.Drawing.Size(391, 28);
